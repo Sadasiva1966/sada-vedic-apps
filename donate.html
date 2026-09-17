@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Support Sada Vedic Apps — donate via UPI QR, UPI ID, or PayPal." />
+  <meta name="theme-color" content="#0D0A1A" />
+  <title>Donate · Sada Vedic Apps</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/app-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+  </div>
+
+  <header class="top">
+    <a class="brand-mark" href="index.html">
+      <img src="assets/app-icon.png" alt="" width="34" height="34" />
+      <span>Sada Vedic Apps<small>Practice · Clarity · Seva</small></span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="apps/sadarogya-sandhyavandanam.html">Sandhyavandanam</a>
+      <a href="apps/vedic-seva.html">Vedic Seva</a>
+      <a href="donate.html" aria-current="page">Donate</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main class="page wrap">
+    <header class="page-hero glass">
+      <p class="eyebrow">Support Sada Vedic Apps</p>
+      <h1>Donate</h1>
+      <p class="lede">
+        Voluntary support for sincere practice tools. Donations do not unlock app features.
+        Same options as inside Sadarogya Sandhyavandanam.
+      </p>
+    </header>
+
+    <div class="stack">
+      <section class="panel donate-panel">
+        <h2>1 · Scan UPI QR</h2>
+        <p class="muted">Open any UPI app (PhonePe, Google Pay, Paytm, BHIM…) and scan this code.</p>
+        <div class="qr-wrap">
+          <img
+            class="qr-image"
+            src="assets/upi-qr.png"
+            width="220"
+            height="220"
+            alt="UPI QR code for ssprakhya-1@oksbi"
+          />
+        </div>
+        <p class="muted small-center">Payee: SadArogya Sandhyavandanam · Note: Support Sada Vedic Apps</p>
+      </section>
+
+      <section class="panel">
+        <h2>2 · UPI ID</h2>
+        <p class="muted">Copy and paste into PhonePe, Google Pay, or any UPI app.</p>
+        <div class="upi-box" id="upiId">ssprakhya-1@oksbi</div>
+        <div class="cta-row" style="justify-content:flex-start;margin-top:1rem">
+          <button type="button" class="btn primary" id="copyUpi">Copy UPI ID</button>
+          <a class="btn ghost" href="upi://pay?pa=ssprakhya-1@oksbi&pn=SadArogya%20Sandhyavandanam&tn=Support%20Sada%20Vedic%20Apps&cu=INR&mc=0000">Open UPI app</a>
+        </div>
+        <p class="muted" style="margin-top:0.85rem;font-size:0.82rem" id="copyStatus" hidden>UPI ID copied</p>
+      </section>
+
+      <section class="panel">
+        <h2>3 · PayPal</h2>
+        <p class="muted">For supporters outside India or who prefer PayPal.</p>
+        <div class="cta-row" style="justify-content:flex-start;margin-top:1rem">
+          <a
+            class="btn primary"
+            href="https://paypal.me/PSADASIVA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Open PayPal</a>
+        </div>
+        <p class="muted" style="margin-top:0.75rem;font-size:0.82rem">
+          paypal.me/PSADASIVA
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Thank you</h2>
+        <p>
+          Your support helps keep these tools ad-free and focused on practice.
+          For questions, email
+          <a href="mailto:kaka027rot2@gmail.com">kaka027rot2@gmail.com</a>.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-glass">
+      <p class="foot-brand">Sada Vedic Apps</p>
+      <p class="foot-links">
+        <a href="donate.html">Donate</a> ·
+        <a href="support.html">Support</a> ·
+        <a href="privacy.html">Privacy Policy</a> ·
+        <a href="mailto:kaka027rot2@gmail.com">kaka027rot2@gmail.com</a>
+      </p>
+      <p class="foot-copy">© <span id="year"></span> Sada Vedic Apps</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.getElementById('copyUpi');
+    const status = document.getElementById('copyStatus');
+    btn.addEventListener('click', async () => {
+      const id = 'ssprakhya-1@oksbi';
+      try {
+        await navigator.clipboard.writeText(id);
+      } catch (_) {
+        const ta = document.createElement('textarea');
+        ta.value = id;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      status.hidden = false;
+      setTimeout(() => { status.hidden = true; }, 2000);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sada Vedic Apps — calm, sincere tools for Vedic practice. Sadarogya Sandhyavandanam and Vedic Seva." />
+  <meta name="theme-color" content="#0D0A1A" />
+  <title>Sada Vedic Apps</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/app-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+  </div>
+
+  <header class="top">
+    <a class="brand-mark" href="index.html">
+      <img src="assets/app-icon.png" alt="" width="34" height="34" />
+      <span>Sada Vedic Apps<small>Practice · Clarity · Seva</small></span>
+    </a>
+    <nav>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="apps/sadarogya-sandhyavandanam.html">Sandhyavandanam</a>
+      <a href="apps/vedic-seva.html">Vedic Seva</a>
+      <a href="donate.html" class="nav-donate">Donate</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glass glass">
+        <p class="eyebrow">Publisher home</p>
+        <h1>Sada<br /><em>Vedic Apps</em></h1>
+        <p class="lede">
+          A small family of apps for sincere Vedic practice —
+          daily Sandhyā guidance, and seva tools made with care.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#apps">View our apps</a>
+          <a class="btn ghost" href="donate.html">Donate</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apps">
+      <div class="wrap">
+        <header class="section-head">
+          <h2>Our apps</h2>
+          <p>One website for every App Store support and privacy link — simple to find, calm to read.</p>
+        </header>
+        <div class="app-grid">
+          <a class="app-card" href="apps/sadarogya-sandhyavandanam.html">
+            <p class="label">Available now</p>
+            <h3>Sadarogya Sandhyavandanam</h3>
+            <p>Daily Sandhyāvandanam timings, mantras, audio, Panchanga, and gentle reminders.</p>
+            <span class="go">Open app page →</span>
+          </a>
+          <a class="app-card" href="apps/vedic-seva.html">
+            <p class="label">Coming soon</p>
+            <h3>Vedic Seva</h3>
+            <p>Currently in development. Store links will be added when the app is publicly available.</p>
+            <span class="go">Open app page →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-glass">
+      <p class="foot-brand">Sada Vedic Apps</p>
+      <p class="foot-links">
+        <a href="donate.html">Donate</a> ·
+        <a href="support.html">Support</a> ·
+        <a href="privacy.html">Privacy Policy</a> ·
+        <a href="mailto:kaka027rot2@gmail.com">kaka027rot2@gmail.com</a>
+      </p>
+      <p class="foot-copy">© <span id="year"></span> Sada Vedic Apps. Ad-free spirit. Made for sincere practice.</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
